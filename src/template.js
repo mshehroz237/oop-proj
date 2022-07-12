@@ -1,4 +1,7 @@
 const Manager = require("../lib/Manager")
+const Engineer = require('../lib/Engineer')
+const Intern = require('../lib/Intern')
+
 
 const generateTemplate = team => {
     const generateManager = manager => {
@@ -33,12 +36,12 @@ const generateTemplate = team => {
      if(team[i].getRole() === 'Manager'){
     html.push(generateManager(team[i]))
     }
-    if(team[i].getRole() === 'Intern'){
-        html.push(generateEngineer(team[i]))
-    }
     if(team[i].getRole() === 'Engineer'){
         html.push(generateIntern(team[i]))
     };
+    if(team[i].getRole() === 'Intern'){
+        html.push(generateEngineer(team[i]))
+    }
  }
  return html.join('')
 }
