@@ -1,34 +1,35 @@
+const Employee = require("../lib/Employee")
 const Manager = require("../lib/Manager")
 const Engineer = require('../lib/Engineer')
 const Intern = require('../lib/Intern')
 
 
 const generateTemplate = team => {
-    const generateManager = Manager => {
+    const generateManager = manager => {
         return `<div>
         <h1>Manager <h1>
-        <p>Name :  ${Manager.getName()}</p>
-        <p>ID : ${Manager.id}</p>
-        <p>Email : ${Manager.email}</p>
-        <p>Office Number:  ${Manager.getOfficeNumber()}</p>
+        <p>Name :  ${manager.getName()}</p>
+        <p>ID : ${manager.id}</p>
+        <p>Email : ${manager.email}</p>
+        <p>Office Number:  ${manager.getOfficeNumber()}</p>
         </div>`
     }
-    const generateEnginner = Engineer => {
+    const generateEngineer = engineer => {
         return `<div>
-        <h1>Manager <h1>
-        <p>Name :  ${Engineer.name}</p>
-        <p>ID : ${Engineer.id}</p>
-        <p>Email : ${Engineer.email}</p>
-        <p>GitHub:  ${Engineer.getGithub()}</p>
+        <h1>Enginner <h1>
+        <p>Name :  ${engineer.name}</p>
+        <p>ID : ${engineer.id}</p>
+        <p>Email : ${engineer.email}</p>
+        <p>GitHub:  ${engineer.getGithub()}</p>
         </div>`
     }
-    const generateIntern = Intern => {
+    const generateIntern = intern => {
         return `<div>
-        <h1>Manager <h1>
-        <p>Name :  ${Intern.getName()}</p>
-        <p>ID : ${Intern.id}</p>
-        <p>Email : ${Intern.email}</p>
-        <p>School:  ${Intern.getSchool()}</p>
+        <h1>Intern <h1>
+        <p>Name :  ${intern.getName()}</p>
+        <p>ID : ${intern.id}</p>
+        <p>Email : ${intern.email}</p>
+        <p>School:  ${intern.getSchool()}</p>
         </div>`
     }
  const html = []

@@ -92,7 +92,7 @@ function enginnerQuestion() {
     ]
     )
         .then(answers => {
-
+            var genHtml = pageRender(teamMembers);
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
             teamMembers.push(engineer)
 
@@ -126,7 +126,6 @@ function intern() {
     ]
     )
         .then(answers => {
-
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school)
             teamMembers.push(intern)
             prompts();
