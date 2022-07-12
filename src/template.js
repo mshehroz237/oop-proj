@@ -4,22 +4,22 @@ const Intern = require('../lib/Intern')
 
 
 const generateTemplate = team => {
-    const generateManager = manager => {
+    const generateManager = Manager => {
         return `<div>
         <h1>Manager <h1>
-        <p>Name :  ${manager.getName()}</p>
-        <p>ID : ${manager.id}</p>
-        <p>Email : ${manager.email}</p>
-        <p>Office Number:  ${manager.getOfficeNumber()}</p>
+        <p>Name :  ${Manager.getName()}</p>
+        <p>ID : ${Manager.id}</p>
+        <p>Email : ${Manager.email}</p>
+        <p>Office Number:  ${Manager.getOfficeNumber()}</p>
         </div>`
     }
     const generateEngineer = engineer => {
         return `<div>
         <h1>Enginner <h1>
-        <p>Name :  ${enginner.getName()}</p>
-        <p>ID : ${engineer.id}</p>
-        <p>Email : ${engineer.email}</p>
-        <p>Github:  ${engineer.getGithub()}</p>
+        <p>Name :  ${Enginner.getName()}</p>
+        <p>ID : ${Engineer.id}</p>
+        <p>Email : ${Engineer.email}</p>
+        <p>Github:  ${Engineer.getGithub()}</p>
         </div>`
     }
     const generateIntern = intern => {
