@@ -13,22 +13,22 @@ const generateTemplate = team => {
         <p>Office Number:  ${Manager.getOfficeNumber()}</p>
         </div>`
     }
-    const generateEngineer = engineer => {
+    const generateEnginner = Engineer => {
         return `<div>
-        <h1>Enginner <h1>
-        <p>Name :  ${Enginner.getName()}</p>
+        <h1>Manager <h1>
+        <p>Name :  ${Engineer.name}</p>
         <p>ID : ${Engineer.id}</p>
         <p>Email : ${Engineer.email}</p>
-        <p>Github:  ${Engineer.getGithub()}</p>
+        <p>GitHub:  ${Engineer.getGithub()}</p>
         </div>`
     }
-    const generateIntern = intern => {
+    const generateIntern = Intern => {
         return `<div>
-        <h1>Intern <h1>
-        <p>Name :  ${intern.name}</p>
-        <p>ID : ${intern.id}</p>
-        <p>Email : ${intern.email}</p>
-        <p>School:  ${intern.getSchool()}</p>
+        <h1>Manager <h1>
+        <p>Name :  ${Intern.getName()}</p>
+        <p>ID : ${Intern.id}</p>
+        <p>Email : ${Intern.email}</p>
+        <p>School:  ${Intern.getSchool()}</p>
         </div>`
     }
  const html = []
