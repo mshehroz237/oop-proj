@@ -1,9 +1,10 @@
+//requiring all the classes
 const Employee = require("../lib/Employee")
 const Manager = require("../lib/Manager")
 const Engineer = require('../lib/Engineer')
 const Intern = require('../lib/Intern')
 
-
+//creating html cards based on the whiuch function gets called
 const generateTemplate = team => {
     const generateManager = manager => {
         return `<div>
@@ -14,6 +15,7 @@ const generateTemplate = team => {
         <p>Office Number:  ${manager.getOfficeNumber()}</p>
         </div>`
     }
+    //creating html cards based on the whiuch function gets called
     const generateIntern = intern => {
         return `<div>
         <h1>Intern <h1>
@@ -23,6 +25,7 @@ const generateTemplate = team => {
         <p>Github:  ${intern.github}</p>
         </div>`
     }
+    //creating html cards based on the whiuch function gets called
     const generateEngineer = engineer => {
         return `<div>
         <h1>Enginner <h1>
@@ -32,7 +35,9 @@ const generateTemplate = team => {
         <p>School:  ${engineer.school}</p>
         </div>`
     }
+    //storing it in html array
  const html = []
+ //created a for loop which will iterate throught the team and call the respective fucntions based on the Role
  for(var i = 0 ; i < team.length ; i ++){
      if(team[i].getRole() === 'Manager'){
     html.push(generateManager(team[i]))
@@ -44,8 +49,10 @@ const generateTemplate = team => {
         html.push(generateEngineer(team[i]))
     }
  }
+ //joing the html
  return html.join('')
 }
+//exporting it and creating the html file by calling the fucntion in the body
  module.exports  = team => {
      return `
      <!DOCTYPE html>
