@@ -61,7 +61,7 @@ function prompts() {
                     if(err){
                         throw err;
                     }
-                    console.log('file has been created');
+                    console.log(teamMembers);
                 })
             }
         })
